@@ -1,12 +1,31 @@
-import React from 'react';
+import React from "react";
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+class App extends React.Component{
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+    state ={
+        number: 0
+    }
+
+    onButtonSubmit = (event) =>{
+        event.preventDefault();
+
+        this.setState({number:this.state.number + 1})
+
+    }
+
+
+    render(){
+        return(
+            <div>
+                <span>{this.state.number}</span>
+                <button onClick={this.onButtonSubmit}>Click Here!</button>
+            </div>
+        )
+    }
+}
+
+ReactDOM.render(
+    <App />,
+    document.querySelector('#root')
+)
