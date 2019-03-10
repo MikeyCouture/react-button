@@ -1,5 +1,19 @@
+
 .testBox{
     width: 100px;
     height: 100px;
-    /* background-color: red; */
+    margin: 0 auto;
+    transition: 0.4s;
+}
+
+.divDaddy{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: 0 auto;
+}
+
+.num{
+    color: white;
 }

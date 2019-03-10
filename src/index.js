@@ -30,11 +30,13 @@ class App extends React.Component{
 
     render(){
         return(
-            <div>
-                <span>{this.state.number}</span>
+            <div className="divDaddy">
+                {/* <span>{this.state.number}</span> */}
                 <button onClick={this.onButtonSubmit}>Click Here!</button>
                 <button onClick={this.onButtonClick}>Restart</button>
-                <div className="testBox" style={{ backgroundColor: this.state.bgcolor }} onClick={this.onButtonSubmit}></div>
+                <div className="testBox" style={{ backgroundColor: this.state.bgcolor }} onClick={this.onButtonSubmit}>
+                    <span className="num">{this.state.number}</span>
+                </div>
             </div>
         )
     }
